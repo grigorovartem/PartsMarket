@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+        version="2.5">
+
+    <servlet>
+        <servlet-name>UserViewServlet</servlet-name>
+        <servlet-class>Servlets.UserViewServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserViewServlet</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>UserFilterServlet</servlet-name>
+        <servlet-class>Servlets.UserFilterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserFilterServlet</servlet-name>
+        <url-pattern>/filter</url-pattern>
+    </servlet-mapping>
+    <!-- Invoke 'Generate' action to add tags or functions -->
+
+</web-app>
