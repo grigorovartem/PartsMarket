@@ -1,13 +1,37 @@
-package Entity;
+package com.grigorov.Entity;
 
+import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.List;
 
+@Entity
+@Table(name = "spareparts")
 public class SparePart {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column
+    private Long id;
+
+    @Column
     private String name;
-    private Brand brand;
-    private long id;
+
+    @Column
     private BigDecimal price;
+
+    @Column
+    @Enumerated(EnumType.STRING)
+    private Brand brand;
+
+    @OneToOne(fetch = FetchType.LAZY, mappedBy = "part")
+    @JoinColumn(name = "part_id")
+    private StorageItem storageItem;
+
+//    @ManyToMany(mappedBy = "spareParts", cascade = CascadeType.ALL)
+//        private List<Order> orders;
+
+    public SparePart() {
+    }
 
     public SparePart(String name, Brand brand, double price) {
         this.name = name;

@@ -1,4 +1,4 @@
-package Entity;
+package com.grigorov.Entity;
 
 public enum Brand {
 
