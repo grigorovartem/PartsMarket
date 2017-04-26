@@ -1,9 +1,11 @@
 # Created by .ignore support plugin (hsz.mobi)
-.idea/dataSources.local.xml
-.idea/workspace.xml
+.idea/
 src/test/
 
 target/
 /src/main/java/com/grigorov/PartsIO/
 /src/main/java/com/grigorov/Runners/
 /src/main/java/com/grigorov/Store/
+spm.iml
+
+
